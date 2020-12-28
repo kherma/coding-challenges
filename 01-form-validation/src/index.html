@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Day 1 | Form Validator</title>
+    <script type="module" src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <h2 class="form__title">Register With Us</h2>
+        <!-- Username -->
+        <div class="form__control">
+          <label class="form__control--label" for="username">Username</label>
+          <input
+            class="form__control--input"
+            type="text"
+            id="username"
+            placeholder="Enter Username"
+          />
+          <small class="form__control--message">Error Message</small>
+        </div>
+        <!-- Email -->
+        <div class="form__control">
+          <label class="form__control--label" for="email">Email</label>
+          <input
+            class="form__control--input"
+            type="text"
+            id="email"
+            placeholder="Enter Email"
+          />
+          <small class="form__control--message">Error Message</small>
+        </div>
+        <!-- Password -->
+        <div class="form__control">
+          <label class="form__control--label" for="password">Password</label>
+          <input
+            class="form__control--input"
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+          />
+          <small class="form__control--message">Error Message</small>
+        </div>
+        <!-- Confirm Password -->
+        <div class="form__control">
+          <label class="form__control--label" for="confirmation"
+            >Confirm Password</label
+          >
+          <input
+            class="form__control--input"
+            type="password"
+            id="confirmation"
+            placeholder="Confirm Password"
+          />
+          <small class="form__control--message">Error Message</small>
+        </div>
+        <button class="form__btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+// Variables
+$main-font: 'Open Sans', sans-serif;
+$light: #f4f4f4;
+$dark: #333;
+$blue-main: #3498db;
+$form-success: #2ecc71;
+$form-error: #e74c3c;
+
+// Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// Global
+html {
+  height: 100%;
+  overflow: hidden;
+  // 1rem = 10px
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: $main-font;
+  // background-color: $light;
+  background: url('https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: url('https://images.pexels.com/photos/3616764/pexels-photo-3616764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+    no-repeat center center/cover;
+  box-shadow: 1rem 1rem 0.5rem rgba($dark, 0.3);
+  width: 40rem;
+  border: 1.5rem solid $dark;
+}
+
+// Form
+.form {
+  padding: 3rem 4rem;
+
+  &__title {
+    text-align: center;
+    margin: 0 0 3rem 0;
+  }
+
+  &__control {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &--label {
+      color: $dark;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    &--input {
+      color: $dark;
+      font-weight: bold;
+      border: 2px solid $light;
+      border-radius: 20rem;
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.4rem;
+      background: transparent;
+
+      &:focus {
+        outline: 0;
+        border-color: $dark;
+      }
+
+      &::placeholder {
+        color: $dark;
+      }
+    }
+
+    &--message {
+      color: $dark;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    // background-color: $blue-main;
+    background-color: $dark;
+    border: none;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    width: 100%;
+    color: $light;
+    border-radius: 0.4rem;
+    display: block;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.success {
+  input {
+    border-color: $form-success;
+  }
+}
+
+.error {
+  input {
+    border-color: $form-error;
+  }
+  small {
+    visibility: visible;
+    color: $form-error;
+  }
+}
