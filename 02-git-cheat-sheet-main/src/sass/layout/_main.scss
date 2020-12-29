@@ -1,0 +1,65 @@
+.cheatsheet {
+  transition: all 2s;
+  background-color: $main-dark;
+
+  .grid__container {
+    transition: all 2s;
+    background-color: $main-dark;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 112rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    &--section {
+      transition: all 2s;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      color: $main-light;
+    }
+
+    &--title {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin: 1rem 0;
+    }
+
+    &--command {
+      transition: all 2s;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      color: $main-light;
+    }
+
+    &--comment {
+      margin-top: 0.5rem;
+      color: $main-green;
+    }
+
+    &--text {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.day__mode {
+  .cheatsheet {
+    background-color: $main-light;
+
+    .grid__container {
+      background-color: $main-light;
+
+      &--section,
+      &--command {
+        color: $main-dark;
+      }
+    }
+  }
+}

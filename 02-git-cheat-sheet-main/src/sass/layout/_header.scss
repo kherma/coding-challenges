@@ -1,0 +1,96 @@
+.header {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+
+  @include mobile {
+    height: 50vh;
+  }
+
+  &__toogler {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+
+    &--image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__title {
+    transition: all 2s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    overflow: hidden;
+    background-color: $main-dark;
+    text-align: center;
+
+    &--main {
+      transition: all 2s;
+      transform: translateY(-2rem);
+      font-size: 6rem;
+      font-weight: $font-bold;
+      color: $main-light;
+      @include mobile {
+        transform: translateY(0);
+        width: 70%;
+        overflow-wrap: break-word;
+      }
+    }
+
+    &--object {
+      transition: all 2s;
+      transform: translateY(2rem);
+      width: 5rem;
+      height: 5rem;
+      background-color: $main-moon;
+      border-radius: 50%;
+      box-shadow: 0.2rem 0.2rem 1rem $main-light,
+        -0.2rem -0.2rem 1rem $main-light;
+    }
+  }
+}
+
+.day__mode {
+  .header {
+    &__title {
+      background-color: $main-light;
+
+      &--main {
+        transform: translateY(10rem);
+        font-size: 6rem;
+        font-weight: $font-bold;
+        color: $main-dark;
+      }
+
+      &--object {
+        transform: translateY(-10rem);
+        width: 8rem;
+        height: 8rem;
+        background-color: $main-sun;
+        border-radius: 50%;
+        animation: sun-circle 2s infinite;
+        box-shadow: 0.4rem 0.4rem 1rem $sun-fog, -0.4rem -0.4rem 1rem $sun-fog,
+          -0.6rem 0.6rem 1rem $sun-fog, 0.4rem -0.4rem 1rem $sun-fog;
+
+        @include mobile {
+          transform: translateY(-21rem);
+        }
+      }
+
+      @include object-sun($sun-fog, 0.4, 0.6);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@mixin object-sun($color, $min, $max) {
+  @keyframes sun-circle {
+    25% {
+      box-shadow: #{$min}rem #{$min}rem 1rem $color,
+        -#{$max}rem -#{$max}rem 1rem $color, -#{$min}rem #{$min}rem 1rem $color,
+        #{$min}rem -#{$min}rem 1rem $color;
+    }
+    50% {
+      box-shadow: #{$min}rem #{$min}rem 1rem $color,
+        -#{$min}rem -#{$min}rem 1rem $color, -#{$min}rem #{$min}rem 1rem $color,
+        #{$max}rem -#{$max}rem 1rem $color;
+    }
+    75% {
+      box-shadow: #{$max}rem #{$max}rem 1rem $color,
+        -#{$min}rem -#{$min}rem 1rem $color, -#{$min}rem #{$min}rem 1rem $color,
+        #{$min}rem -#{$min}rem 1rem $color;
+    }
+    100% {
+      box-shadow: #{$min}rem #{$min}rem 1rem $color,
+        -#{$min}rem -#{$min}rem 1rem $color, -#{$max}rem #{$max}rem 1rem $color,
+        #{$min}rem -#{$min}rem 1rem $color;
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 567px) and (min-height: 415px) {
+    @content;
+  }
+}

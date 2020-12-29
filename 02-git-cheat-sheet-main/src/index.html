@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>02 | Git Cheat Sheet</title>
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="header">
+        <div class="header__toogler">
+          <img
+            class="header__toogler--image"
+            src="./images/sun.svg"
+            alt="switch"
+          />
+        </div>
+        <div class="header__title">
+          <h1 class="header__title--main">git cheat sheet</h1>
+          <span class="header__title--object"></span>
+        </div>
+      </div>
+    </header>
+    <main id="main-cheatsheet">
+      <div class="cheatsheet">
+        <div class="grid__container">
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Basic Operations</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git init</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git add .</code>
+              <code class="grid__container--comment"
+                >&#47;&#47; Delete file from staging area</code
+              >
+              <code class="grid__container--text"
+                >git restore —staged name</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git status</code>
+              <code class="grid__container--text">git diff </code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git commit -m ‘message’</code>
+              <code class="grid__container--comment"
+                >&#47;&#47; Change author of last commit</code
+              >
+              <code class="grid__container--text"
+                >git commit —amend -author ’...’</code
+              >
+              <code class="grid__container--comment"
+                >&#47;&#47; Change message of last commit</code
+              >
+              <code class="grid__container--text"
+                >git commit —amend -m ‘...’</code
+              >
+              <code class="grid__container--comment"
+                >&#47;&#47; Delete from working repo and staging area</code
+              >
+              <code class="grid__container--text">git rm 'file_name'</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; git fetch + git merge FETCH_HEAD</code
+              >
+              <code class="grid__container--text">git pull -v</code>
+              <code class="grid__container--text">git push -u</code>
+              <code class="grid__container--text">git fetch -v</code>
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Branch Management</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git branch -a</code>
+              <code class="grid__container--text">git branch 'name'</code>
+              <code class="grid__container--text">git checkout 'name'</code>
+              <code class="grid__container--text">git checkout -b 'name'</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git branch -d 'name'</code>
+              <code class="grid__container--text"
+                >git branch -m 'old' 'new'</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; If branch deleted in remote repo</code
+              >
+              <code class="grid__container--text">git fetch -v</code>
+              <code class="grid__container--text"
+                >git remote update origin —prune</code
+              >
+              <code class="grid__container--text">git branch -d 'branch' </code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; Push local branch to remote repo</code
+              >
+              <code class="grid__container--text"
+                >git push -u origin 'branch'</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; Delete remote branch from terminal</code
+              >
+              <code class="grid__container--text"
+                >git push update origin -d 'branch'</code
+              >
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Reading</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; Status of remote / local repos</code
+              >
+              <code class="grid__container--text">git remote show origin</code>
+              <code class="grid__container--text">git remote -vv</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text"
+                >git cat-file -s / -t / -p</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text"
+                >git log —oneline / —graph</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; All changes from last 90 days</code
+              >
+              <code class="grid__container--text">git reflog</code>
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Tags</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git tag</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git tag v1.0.0</code>
+              <code class="grid__container--text"
+                >git tag -a v1.0.0 -m ‘message’</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git push -u —tag</code>
+              <code class="grid__container--text"
+                >git push -u origin v1.0.0</code
+              >
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Merge &amp; Rebase</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git merge 'name'</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text"
+                >git rebase 'name' | git merge 'name'</code
+              >
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Stash</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git stash</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git stash pop</code>
+              <code class="grid__container--text">git stash drop</code>
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Reset &amp; Revert</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git reset —hard HASH</code>
+              <code class="grid__container--text">git reset -mixed HASH</code>
+              <code class="grid__container--text">git reset -soft HASH</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git revert HASH</code>
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Cherry pick</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git cherry-pick hash</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text"
+                >git cherry pick —no-commit HASH</code
+              >
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">
+              Packages, ignore &amp; config
+            </h3>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git gc</code>
+              <code class="grid__container--text"
+                >git 'file' | git unpack-objects</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">.gitignore</code>
+              <code class="grid__container--text">git rm —cached 'file'</code>
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text">git config —list</code>
+              <code class="grid__container--text"
+                >git config — global user.name ‘name’</code
+              >
+              <code class="grid__container--text"
+                >git config credential.helper “”</code
+              >
+            </p>
+          </div>
+          <!-- Section -->
+          <div class="grid__container--section">
+            <h3 class="grid__container--title">Fork</h3>
+            <p class="grid__container--command">
+              <code class="grid__container--comment"
+                >&#47;&#47; Fork on GitHub</code
+              >
+              <code class="grid__container--comment"
+                >&#47;&#47; Clone Repo</code
+              >
+              <code class="grid__container--comment"
+                >&#47;&#47; Pull request</code
+              >
+            </p>
+            <p class="grid__container--command">
+              <code class="grid__container--text"
+                >git remote add upstream url</code
+              >
+              <code class="grid__container--text">git fetch upstream -v</code>
+              <code class="grid__container--text">git pull upstream main</code>
+              <code class="grid__container--text">git push -u</code>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer">
+      <div class="footer">
+        <p class="footer__text">
+          Copyright &copy; 2020 <a href="#" target="_blank">Kamil Herma</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.footer {
+  transition: all 2s;
+  font-size: 1.6rem;
+  color: $main-light;
+  text-transform: uppercase;
+  border-top: 1px solid $main-light;
+  height: 6rem;
+  background-color: $main-dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  a {
+    color: $main-moon;
+  }
+}
+
+.day__mode {
+  .footer {
+    background-color: $main-light;
+    border-top: 1px solid $main-dark;
+    color: $main-dark;
+
+    a {
+      color: $main-sun;
+    }
+  }
+}
