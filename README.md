@@ -7,3 +7,4 @@
 3.  Movie Seat Book: https://amazing-yalow-85adfd.netlify.app/
 4.  Birthday Reminder (REACT): practice useState
 5.  Tours (REACT): practice useState, useEffect, fetch data, conditional rendering
+6.  Reviews (REACT): practice useState, useEffect, conditional rendering
