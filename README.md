@@ -8,3 +8,4 @@
 4.  Birthday Reminder (REACT): practice useState
 5.  Tours (REACT): practice useState, useEffect, fetch data, conditional rendering
 6.  Reviews (REACT): practice useState, useEffect, conditional rendering
+7.  Accordion (REACT): practice useEffect, conditional rendering
