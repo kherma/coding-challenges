@@ -9,3 +9,4 @@
 5.  Tours (REACT): practice useState, useEffect, fetch data, conditional rendering
 6.  Reviews (REACT): practice useState, useEffect, conditional rendering
 7.  Accordion (REACT): practice useEffect, conditional rendering
+8.  Menu (REACT): practice useState, conditional rendering
