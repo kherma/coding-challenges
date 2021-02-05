@@ -11,3 +11,4 @@
 7.  Accordion (REACT): useEffect, conditional rendering
 8.  Menu (REACT): useState, conditional rendering
 9.  Tabs (REACT): useState, useEffect conditional rendering, fetch data
+10. Slider (REACT): useState, useEffect conditional rendering
