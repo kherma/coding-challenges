@@ -12,3 +12,4 @@
 8.  Menu (REACT): useState, conditional rendering
 9.  Tabs (REACT): useState, useEffect conditional rendering, fetch data
 10. Slider (REACT): useState, useEffect conditional rendering
+11. Lorem Ipsum generator (REACT): Basic forms
