@@ -16,3 +16,4 @@
 12. Shades & Tints generator (REACT): Basic forms
 13. Grocery list (REACT): Basic Forms
 14. Navar (REACT): useRef, useState, useEffect
+15. Sidebar and Modal (REACT): useContext
