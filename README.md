@@ -18,3 +18,5 @@
 14. Navar (REACT): useRef, useState, useEffect
 15. Sidebar and Modal (REACT): useContext
 16. Stripe Submenu (REACT): useContext, useRef
+17. Cart (REACT): useContext, useReducer
+18. Cocktails (REACT): router, prop-types
